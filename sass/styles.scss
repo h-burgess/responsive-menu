@@ -9,6 +9,7 @@ $desk: 74em;
 --------------------------------------------*/
 
 $red: #D21300;
+$darkRed: #b12012;
 $black: #323232;
 
 /* Variables end
@@ -100,6 +101,8 @@ header{
         background: $red;
         color:#ffffff;
         > ul{
+            padding: 0;
+            margin: 0;
             @media screen and (max-width: 703px) {
                 display: none;
                 margin: 3.2em 0 0 0;
@@ -116,9 +119,10 @@ header{
                     color: #fff;
                     text-decoration:none;
                     padding: 1em 2em;
-                    box-shadow: 4px 0 7px #9c1414;
                     display: block;
                     width: 100%;
+                    -webkit-transition: all 0.4s;
+                    transition: all 0.4s;
                     @media screen and (min-width: $tab) {
                         font-size: 16px;
                         padding: 0.7em 1.2em;
@@ -130,6 +134,9 @@ header{
                     @media screen and (min-width: $tab-wide) {
                         font-size: 18px;
                         padding: 1em 2em;
+                    }
+                    &:hover{
+                        background: $darkRed;
                     }
                 }
             }
