@@ -1,24 +1,15 @@
-
-// Nav slide
+// Nav dropdown animation
 $(document).ready(function () {
     $(".menu-text").click(function () {
-        $("nav ul").slideToggle(200);
+        $(".top-layer-nav-list").slideToggle(200);
+        $('#top-nav > ul li ul').hide();
     });
+    // This animated the toggle.
+    if ($('.target').is(':visible')) {}
 });
-// Hamburger toggle
-(function () {
-    "use strict";
-    var toggles = document.querySelectorAll(".menu-text");
-    for (var i = toggles.length - 1; i >= 0; i--) {
-        var toggle = toggles[i];
-        toggleHandler(toggle);
-    };
-    function toggleHandler(toggle) {
-        toggle.addEventListener( "click", function(e) {
-            e.preventDefault();
-            (this.classList.contains("active") === true) ? this.classList.remove("active") : this.classList.add("active");
-        });
-    }
-})();
-
+$('#top-nav li ul').hide().removeClass('fallback');
+$('#top-nav > .top-layer-nav-list > li').click(function () {
+    $('#top-nav li ul').not($(this).children("ul").slideToggle(200)).hide();
+    $('#top-nav li').not($(this).toggleClass('extended')).removeClass('extended');
+});
 
