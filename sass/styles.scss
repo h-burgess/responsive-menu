@@ -3,39 +3,6 @@
 
 $tab: 44em;
 $tab-wide: 55em;
-$desk: 74em;
-
-/* Colours
---------------------------------------------*/
-
-$red: #D21300;
-$darkRed: #b12012;
-$black: #323232;
-
-/* Variables end
---------------------------------------------*/
-
-/* Widths
---------------------------------------------*/
-
-@mixin mob-width {
-    width: 90%;
-    margin: 0 auto;
-}
-@mixin tab-width {
-    width: 80%;
-    margin: 0 auto;
-}
-@mixin desk-width {
-    width: 80%;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-@mixin desk-wide-width {
-    width: 80%;
-    max-width: 1600px;
-    margin: 0 auto;
-}
 
 /* Mixins end
 --------------------------------------------*/
@@ -55,16 +22,13 @@ html {
 
 body{
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    color: $black;
     overflow-x: hidden;
-    background: #fff;
+    background: #247BA0;
     margin: 0;
 }
 a {
     text-decoration: none;
-    font-weight: bold;
     font-size: 16px;
-    color: $black;
 }
 
 /*  TYPOGRAPHY END
@@ -107,7 +71,7 @@ header{
         bottom:auto;
         text-align: center;
         overflow:visible;
-        background: $red;
+        background: #FF1654;
         color:#ffffff;
         > ul{
             @media screen and (max-width: 879px) {
@@ -143,6 +107,7 @@ header{
                     width: 100%;
                     -webkit-transition: all 0.4s;
                     transition: all 0.4s;
+                    cursor: pointer;
                     @media screen and (min-width: $tab-wide) {
                         font-size: 14px;
                         padding: 0.8em;
@@ -153,13 +118,6 @@ header{
                     }
                     @media screen and (min-width: $tab-wide) {
                         padding: 1em 1.7em;
-                    }
-                    @media screen and (min-width: $desk) {
-                        font-size: 16px;
-                        padding: 1em 1.5em;
-                    }
-                    &:hover{
-                        background-color: $darkRed;
                     }
                 }
             }
@@ -172,7 +130,7 @@ header{
             position: absolute;
             top: 100%;
             left: 0;
-            background: $red;
+            background: #FF1654;
             padding: 0;
             width: 100%;
             @media screen and (min-width: $tab-wide) {
@@ -186,12 +144,10 @@ header{
                 color: #fff;
                 display: block;
                 padding: 0.7em 1.6em;
+                cursor: pointer;
                 @media screen and (min-width: $tab-wide) {
                     margin: 0;
                     text-align: left;
-                }
-                &:hover {
-                    background: $darkRed;
                 }
             }
             li:last-child{
@@ -256,7 +212,7 @@ header{
             bottom: -10px;
         }
         .menu-toggle-switch {
-            background-color: $red;
+            background-color: #FF1654;
             min-height: 50px;
             width: 100%;
         }
@@ -276,10 +232,10 @@ header{
             transition-property: bottom, transform;
         }
         .menu-toggle-switch.active {
-            background-color: $red;
+            background-color: #FF1654;
         }
         .menu-toggle-switch.active span {
-            background-color: $red;
+            background-color: #FF1654;
         }
         .menu-toggle-switch.active span::before {
             top: 0;
