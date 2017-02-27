@@ -59,6 +59,7 @@ header{
                     -webkit-transition: all 0.4s;
                     transition: all 0.4s;
                     cursor: pointer;
+                    color: #fff;
                     @media screen and (min-width: $tab-wide) {
                         font-size: 14px;
                         padding: 0.8em;
@@ -84,6 +85,9 @@ header{
             width: 100%;
             @media screen and (min-width: $tab-wide) {
                 width: 232px;
+                position: absolute;
+                top: 100%;
+                left: 0;
             }
             li{
                 display: block;
